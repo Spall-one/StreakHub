@@ -1,0 +1,40 @@
+{
+  "collectionName": "trasmissiones",
+  "info": {
+    "singularName": "trasmissione",
+    "pluralName": "trasmissiones",
+    "displayName": "Trasmissione"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "canale": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canale.canale",
+      "inversedBy": "trasmissioni"
+    },
+    "streamer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::streamer.streamer",
+      "inversedBy": "trasmissioni"
+    },
+    "data": {
+      "type": "date"
+    },
+    "ora_inizio": {
+      "type": "time"
+    },
+    "durata_minuti": {
+      "type": "integer"
+    },
+    "titolo": {
+      "type": "string"
+    },
+    "codice_embed": {
+      "type": "text"
+    }
+  }
+}

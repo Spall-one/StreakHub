@@ -3,7 +3,7 @@
 This repository contains the initial prototype for **Streak**, a themed live streaming platform. The project is split into two main parts:
 
 - `frontend/` – a Next.js application with Tailwind CSS and Google/Twitch authentication via NextAuth.
-- `backend/` – placeholder for a future headless CMS implementation (e.g. Strapi).
+- `backend/` – Strapi headless CMS providing channel, streamer and transmission management.
 
 The frontend currently demonstrates channel selection, dynamic player updates based on the schedule, and simple authentication hooks. Environment variables for authentication providers can be configured in `.env.example`.
 
@@ -16,3 +16,13 @@ npm run dev
 ```
 
 Then open http://localhost:3000.
+
+### Backend CMS
+
+```bash
+cd backend
+npm install
+npm run develop
+```
+
+The backend exposes a custom endpoint `/api/live/:slug` to retrieve the current transmission for a channel.
