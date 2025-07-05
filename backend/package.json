@@ -1,0 +1,14 @@
+{
+  "name": "streak-cms",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build"
+  },
+  "dependencies": {
+    "@strapi/strapi": "^4.15.4",
+    "sqlite3": "^5.1.2"
+  }
+}

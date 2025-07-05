@@ -1,0 +1,36 @@
+{
+  "collectionName": "canales",
+  "info": {
+    "singularName": "canale",
+    "pluralName": "canales",
+    "displayName": "Canale"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nome"
+    },
+    "descrizione": {
+      "type": "text"
+    },
+    "icona": {
+      "type": "string"
+    },
+    "colore_tema": {
+      "type": "string"
+    },
+    "trasmissioni": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trasmissione.trasmissione"
+    }
+  }
+}
