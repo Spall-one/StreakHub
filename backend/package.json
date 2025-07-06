@@ -5,10 +5,15 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build"
+    "build": "strapi build",
+    "test": "jest"
   },
   "dependencies": {
     "@strapi/strapi": "^4.15.4",
     "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "jest": "^29",
+    "supertest": "^6"
   }
 }

@@ -26,3 +26,15 @@ npm run develop
 ```
 
 The backend exposes a custom endpoint `/api/live/:slug` to retrieve the current transmission for a channel.
+
+## Testing
+
+Run unit tests for the frontend and backend with:
+
+```bash
+cd frontend && npm install && npm test
+```
+
+```bash
+cd backend && npm install && npm test
+```
