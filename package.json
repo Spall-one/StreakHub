@@ -1,0 +1,13 @@
+{
+  "name": "streakhub",
+  "private": true,
+  "scripts": {
+    "dev": "node dev.js",
+    "setup": "npm install --prefix frontend --legacy-peer-deps && npm install --prefix backend --legacy-peer-deps",
+    "test": "npm test --prefix frontend && npm test --prefix backend"
+  },
+  "devDependencies": {
+    "open": "^9.1.0",
+    "wait-on": "^7.0.1"
+  }
+}

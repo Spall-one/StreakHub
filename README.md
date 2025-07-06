@@ -9,10 +9,21 @@ The frontend currently demonstrates channel selection, dynamic player updates ba
 
 ## Development
 
+--- q0258z-codex/crea-eseguibile-per-backend-e-frontend
+Start both the frontend and backend together from the repository root. The `dev` script uses `dev.js` to launch both apps and will install sub-project dependencies on first run:
+
+```bash
+npm install
+# optional: install dependencies for each project explicitly
+npm run setup
+# start the development servers and open the browser
+npm run dev
+
 Start both the frontend and backend together using the helper script:
 
 ```bash
 node dev.js
+main
 ```
 
 This launches the frontend on <http://localhost:3000> and the Strapi admin on
