@@ -19,13 +19,6 @@ npm run setup
 # start the development servers and open the browser
 npm run dev
 
-Start both the frontend and backend together using the helper script:
-
-```bash
-node dev.js
-main
-```
-
 This launches the frontend on <http://localhost:3000> and the Strapi admin on
 <http://localhost:1337/admin>. Refresh either page after modifying code to see
 the changes.
@@ -49,6 +42,11 @@ npm run develop
 ```
 
 The backend exposes a custom endpoint `/api/live/:slug` to retrieve the current transmission for a channel.
+
+Additional endpoints are available to import a schedule via Excel. The template is generated dynamically by the backend:
+
+- `GET /api/palinsesto/template` – download the Excel template.
+- `POST /api/palinsesto/upload` – upload the filled template.
 
 ## Testing
 
