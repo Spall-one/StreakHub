@@ -9,13 +9,26 @@ The frontend currently demonstrates channel selection, dynamic player updates ba
 
 ## Development
 
+Start both the frontend and backend together from the repository root:
+
+```bash
+npm install
+npm run dev
+```
+
+This launches the frontend on <http://localhost:3000> and the Strapi admin on
+<http://localhost:1337/admin>. Refresh either page after modifying code to see
+the changes.
+
+### Run parts individually
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-Then open http://localhost:3000.
+Then open <http://localhost:3000>.
 
 ### Backend CMS
 
