@@ -12,6 +12,23 @@ export default function AdminPage() {
   const [streamers, setStreamers] = useState<Streamer[]>([]);
   const [transmissions, setTransmissions] = useState<Transmission[]>([]);
 
+  const handleDownload = () => {
+    window.open('/api/palinsesto/template', '_blank');
+  };
+
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const formData = new FormData();
+    formData.append('file', file);
+    await fetch('/api/palinsesto/upload', {
+      method: 'POST',
+      body: formData,
+    });
+    alert('File uploaded');
+    e.target.value = '';
+  };
+
   useEffect(() => {
     fetch('/api/data')
       .then((r) => r.json())
@@ -46,6 +63,16 @@ export default function AdminPage() {
           Logout
         </button>
       </header>
+
+      <div className="flex items-center space-x-4">
+        <button
+          onClick={handleDownload}
+          className="px-3 py-1 bg-blue-600 text-white rounded"
+        >
+          Scarica template
+        </button>
+        <input type="file" accept=".xlsx" onChange={handleUpload} />
+      </div>
 
       <Calendar transmissions={transmissions} channels={channels} />
     </div>
