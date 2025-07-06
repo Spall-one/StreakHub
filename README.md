@@ -9,10 +9,11 @@ The frontend currently demonstrates channel selection, dynamic player updates ba
 
 ## Development
 
-Start both the frontend and backend together using the helper script:
+Start both the frontend and backend together from the repository root:
 
 ```bash
-node dev.js
+npm install
+npm run dev
 ```
 
 This launches the frontend on <http://localhost:3000> and the Strapi admin on

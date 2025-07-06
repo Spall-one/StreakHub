@@ -1,0 +1,12 @@
+{
+  "name": "streakhub",
+  "private": true,
+  "scripts": {
+    "dev": "node dev.js",
+    "test": "npm test --prefix frontend && npm test --prefix backend"
+  },
+  "devDependencies": {
+    "open": "^9.1.0",
+    "wait-on": "^7.0.1"
+  }
+}

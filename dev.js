@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 const { spawn } = require('child_process');
-
-function openBrowser(url) {
-  const command = process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'start' : 'xdg-open';
-  spawn(command, [url], { stdio: 'ignore', detached: true, shell: true });
-}
+const waitOn = require('wait-on');
+const open = require('open');
 
 const backend = spawn('npm', ['run', 'develop'], {
   cwd: 'backend',
@@ -18,10 +15,14 @@ const frontend = spawn('npm', ['run', 'dev'], {
   shell: true,
 });
 
-setTimeout(() => {
-  openBrowser('http://localhost:3000');
-  openBrowser('http://localhost:1337/admin');
-}, 5000);
+waitOn({ resources: ['http://localhost:3000', 'http://localhost:1337/admin'] })
+  .then(() => {
+    open('http://localhost:3000');
+    open('http://localhost:1337/admin');
+  })
+  .catch((err) => {
+    console.error('Error waiting for servers to start', err);
+  });
 
 function cleanup() {
   backend.kill('SIGINT');
