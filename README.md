@@ -9,7 +9,6 @@ The frontend currently demonstrates channel selection, dynamic player updates ba
 
 ## Development
 
---- q0258z-codex/crea-eseguibile-per-backend-e-frontend
 Start both the frontend and backend together from the repository root. The `dev` script uses `dev.js` to launch both apps and will install sub-project dependencies on first run:
 
 ```bash
@@ -19,8 +18,7 @@ npm run setup
 # start the development servers and open the browser
 npm run dev
 
-<<<<<< v1x0b8-codex/migliora-lancio-eseguibile-e-interfaccia-backend
-On Windows you can simply double click `start.bat`, which installs everything on first run and opens both the frontend and the Strapi admin in your default browser.
+
 
 =======
  main
@@ -64,3 +62,6 @@ cd frontend && npm install && npm test
 ```bash
 cd backend && npm install && npm test
 ```
+
+On Windows you can double click `test.bat` to install dependencies and run
+tests for both projects automatically.
