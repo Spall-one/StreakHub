@@ -60,3 +60,6 @@ cd frontend && npm install && npm test
 ```bash
 cd backend && npm install && npm test
 ```
+
+On Windows you can double click `test.bat` to install dependencies and run
+tests for both projects automatically.
