@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+const { spawn } = require('child_process');
+const waitOn = require('wait-on');
+const open = require('open');
 
 const backend = spawn('npm', ['run', 'develop'], {
   cwd: 'backend',
@@ -30,12 +33,6 @@ waitOn({ resources: ['http://localhost:3000', 'http://localhost:1337/admin'] })
   .catch((err) => {
     console.error('Error waiting for servers to start', err);
   });
-=======
-setTimeout(() => {
-  openBrowser('http://localhost:3000');
-  openBrowser('http://localhost:1337/admin');
-}, 5000);
- main
 
 function cleanup() {
   backend.kill('SIGINT');
