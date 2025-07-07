@@ -13,6 +13,7 @@ if not exist backend\node_modules (
     echo Installing backend dependencies...
     npm install --prefix backend --legacy-peer-deps
 )
+ g6fbcw-codex/migliora-lancio-eseguibile-e-interfaccia-backend
 where node >NUL 2>&1
 if %errorlevel% neq 0 (
     echo Node.js is required but was not found in your PATH.
@@ -30,4 +31,7 @@ if %errorlevel% neq 0 (
 echo Starting development servers...
 node dev.js
 pause
+=======
+call npm run dev
+main
 endlocal

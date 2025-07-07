@@ -18,8 +18,10 @@ npm run setup
 # start the development servers and open the browser
 npm run dev
 
-On Windows you can simply double click `start.bat`. The script installs all dependencies on first run, starts both servers and keeps the console window open so you can read any messages. When the servers are ready your default browser opens automatically.
 
+
+=======
+ main
 This launches the frontend on <http://localhost:3000> and the Strapi admin on
 <http://localhost:1337/admin>. Refresh either page after modifying code to see
 the changes.
